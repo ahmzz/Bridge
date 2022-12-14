@@ -7,23 +7,23 @@ import colors from '../assets/colors/colors';
 
 const data = [
   {
-    title: 'Save time by tracking your studies',
-    text: 'Schedule your classes, assignments, quizzes and more',
+    title: 'Save time by staying on our Application',
+    text: 'Learn Sign language and communicate with sweet people',
     image: require('../assets/images/Onboard.png'),
   },
   {
     title: 'Stay on top of your education',
-    text: 'Reduce your stress, increase your productivity',
+    text: 'Reduce your stress, increase your knowledge',
     image: require('../assets/images/Onboard5.png'),
   },
   {
     title: 'Spend more time doing the things you love',
-    text: 'Get started within five minutes',
+    text: 'Get started within one minutes',
     image: require('../assets/images/Onboard3.png'),
   },
 ];
 
-const Onboarding = (props) => {
+const Onboarding = ({navigation}) => {
   const renderItem = ({item}) => {
     return (
       <View style={styles.slide}>
@@ -71,7 +71,8 @@ const Onboarding = (props) => {
   };
 
   const handleDone = () => {
-    props.handleDone();
+    navigation.navigate("Home");
+    
   };
 
   return (
@@ -109,6 +110,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontFamily: 'OpenSans-Bold',
     marginHorizontal: 60,
+    marginBottom:20,
   },
   text: {
     fontSize: 14,
@@ -116,7 +118,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontFamily: 'OpenSans-SemiBold',
     marginHorizontal: 60,
-    marginTop: 20,
+    marginBottom: 80,
   },
   dotStyle: {
     backgroundColor: colors.blueFaded,

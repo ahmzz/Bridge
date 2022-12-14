@@ -1,27 +1,24 @@
 
-import React, {useState} from 'react';
-import Home from './login-signup/src/Home';
-import Onboarding from './components/Onboarding';
-
-
+import { NavigationContainer } from '@react-navigation/native';
+import { StyleSheet, Text, View } from 'react-native'
+import React, { useEffect,useState } from 'react'
+import AuthNavigation from './login-signup/Navigation/authNavigation';
+import SplashScreen from './login-signup/src/SplashScreen';
 
 const App = () => {
-  const [showOnboard, setShowOnboard] = useState(true);
-
-  const handleOnboardFinish = () => {
-    setShowOnboard(false);
-  };
+  const [user,setUser]=useState(false)
+    useEffect(()=>{
+        setTimeout(() => {
+            console.log("Splachscreen")
+            setUser(true)
+          }, 5000);
+    },[])
   return (
     <>
-      {showOnboard && <Onboarding handleDone={handleOnboardFinish} />}
+      <NavigationContainer>
+      {user===true?<AuthNavigation/>:<SplashScreen/>}
       
-      {!showOnboard && <Home/>}
-
-
-    
-      
-      
-      
+      </NavigationContainer>   
       
     </>
     
@@ -34,5 +31,4 @@ const App = () => {
 
 
 export default App;
-
 

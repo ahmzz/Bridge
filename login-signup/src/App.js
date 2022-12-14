@@ -1,4 +1,4 @@
-import * as React from 'react';
+/*import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './login-signup/src/Home';
@@ -7,7 +7,7 @@ import Login from './login-signup/src/Login';
 
 const Stack = createNativeStackNavigator();
 
-function App() {
+function Apps() {
   return (
     <NavigationContainer>
       
@@ -20,4 +20,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;*/

@@ -2,19 +2,19 @@ import React from 'react';
 import {View, Text, Touchable, TouchableOpacity} from 'react-native';
 import Background from './Background';
 import Btn from './Btn';
-import {darkGreen} from './Constants';
+import {blueDark} from './Constants';
 import Field from './Field';
 
 const Signup = props => {
   return (
     <Background>
-      <View style={{alignItems: 'center', width: 350}}>
+      <View style={{alignItems: 'center', width: 430}}>
         <Text
           style={{
             color: 'white',
             fontSize: 33,
             fontWeight: 'bold',
-            marginTop: 20,
+           marginTop: 20,
           }}>
           Register
         </Text>
@@ -31,9 +31,9 @@ const Signup = props => {
           style={{
             backgroundColor: 'white',
             height: 700,
-            width: 400,
+            width: 460,
             borderTopLeftRadius: 130,
-            paddingTop:50,
+            paddingTop:32,
             alignItems:'center',
           }}>
           <Field placeholder="First Name" />
@@ -55,7 +55,7 @@ const Signup = props => {
             <Text style={{color: 'grey', fontSize: 14}}>
               By signing in, you agree to our{' '}
             </Text>
-            <Text style={{color: darkGreen, fontWeight: 'bold', fontSize: 14}}>
+            <Text style={{color: blueDark, fontWeight: 'bold', fontSize: 14}}>
               Terms & Conditions
             </Text>
           </View>
@@ -67,18 +67,18 @@ const Signup = props => {
               justifyContent :"center",
               width: '78%',
               paddingRight: 16,
-              marginBottom: 10
+              //marginBottom: 10,
             }}>
             <Text style={{color: 'grey', fontSize: 14}}>
               and {" "}
             </Text>
-            <Text style={{color: darkGreen, fontWeight: 'bold', fontSize: 14}}>
+            <Text style={{color: blueDark, fontWeight: 'bold', fontSize: 14}}>
               Privacy Policy
             </Text>
           </View>
           <Btn
             textColor="white"
-            bgColor={darkGreen}
+            bgColor={blueDark}
             btnLabel="Signup"
             Press={() => {
               alert('Accout created');
@@ -97,7 +97,7 @@ const Signup = props => {
             <TouchableOpacity
               onPress={() => props.navigation.navigate('Login')}>
               <Text
-                style={{color: darkGreen, fontWeight: 'bold', fontSize: 16}}>
+                style={{color:blueDark , fontWeight: 'bold', fontSize: 16}}>
                 Login
               </Text>
             </TouchableOpacity>
